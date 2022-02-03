@@ -3,19 +3,18 @@ package questao.seis;
 public class Questao {
 	private String pergunta;
 	private String resposta1, resposta2, resposta3, resposta4;
-	private  int opcao[] = new int[5];
+	private  int opcao[] = {1,2,3,4};
 	private  int gabarito;
 	
 
 	
-	public Questao(String pergunta, String resposta1, String resposta2, String resposta3, String resposta4, int[] opcao,int gabarito) {
+	public Questao(String pergunta, String resposta1, String resposta2, String resposta3, String resposta4,int gabarito) {
 		
 		this.pergunta = pergunta;
 		this.resposta1 = resposta1;
 		this.resposta2 = resposta2;
 		this.resposta3 = resposta3;
 		this.resposta4 = resposta4;
-		this.opcao = opcao;
 		this.gabarito = gabarito;
 	}
 	
