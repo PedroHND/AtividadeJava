@@ -6,6 +6,20 @@ public class Questao {
 	private  int opcao[] = new int[5];
 	private  int gabarito[] = new int[5];
 	
+
+	
+	public Questao(String pergunta, String resposta1, String resposta2, String resposta3, String resposta4, int[] opcao,int[] gabarito) {
+		
+		this.pergunta = pergunta;
+		this.resposta1 = resposta1;
+		this.resposta2 = resposta2;
+		this.resposta3 = resposta3;
+		this.resposta4 = resposta4;
+		this.opcao = opcao;
+		this.gabarito = gabarito;
+	}
+	
+	
 	public String getPergunta() {
 		return pergunta;
 	}
