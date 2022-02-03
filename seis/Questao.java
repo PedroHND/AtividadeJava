@@ -8,12 +8,14 @@
 
 package questao.seis;
 
+import java.util.ArrayList;
+
 public class Questao {
 	private String pergunta;
 	private String resposta1, resposta2, resposta3, resposta4;
 	private  int opcao[] = {1,2,3,4};
 	private  int gabarito;
-	
+	//private ArrayList<Questao> lista = new ArrayList();
 
 	
 	public Questao(String pergunta, String resposta1, String resposta2, String resposta3, String resposta4,int gabarito) {
@@ -26,6 +28,8 @@ public class Questao {
 		this.gabarito = gabarito;
 	}
 	
+	
+
 	
 	public String getPergunta() {
 		return pergunta;
@@ -69,7 +73,7 @@ public class Questao {
 	public void setGabarito(int gabarito) {
 		this.gabarito = gabarito;
 	}
-
+	//for reach
 	@Override
 	public String toString() {
 		return "Questão: \n"
@@ -78,7 +82,7 @@ public class Questao {
 				+"Resposta 2: " + getResposta2() +"\n"
 				+"Resposta 3: " + getResposta3() +"\n"
 				+"Resposta 4: " + getResposta4() +"\n"
-				+ "Digite o número referente a resposta que você acha que está correta.";
+				+"Digite o número referente a resposta que você acha que está correta. \n";
 	}
 	
 }
