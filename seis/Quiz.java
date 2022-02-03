@@ -40,9 +40,20 @@ public class Quiz {
 		
 	}
 	
-	public static void leituraDasQuestoes(ArrayList<Questao> l) {
+	public static void leituraDasQuestoes(ArrayList<Questao> l, Scanner s, Participante par) {
+		
 		for(int i=0;i<4;i++) {
 			System.out.println(l.get(0));
+			
+			verificarRespostas(s, par);
+			
+		}
+	}
+	
+	public static void verificarRespostas(Scanner s, Participante par) {
+		try {
+			
+		} catch (Exception e) {
 			
 		}
 	}
