@@ -1,3 +1,13 @@
+/*Classe Questão, criada no dia 03/02/2022
+ * 
+ * Todos os direitos reservados a Compasso.UOL e Pedro Henrique Nunes Dutra
+ * 
+ * Classe que será utilizada na criação de questões do quiz.
+ * 
+ * */
+
+
+
 package questao.seis;
 
 public class Questao {
