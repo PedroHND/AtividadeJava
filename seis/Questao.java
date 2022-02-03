@@ -4,11 +4,11 @@ public class Questao {
 	private String pergunta;
 	private String resposta1, resposta2, resposta3, resposta4;
 	private  int opcao[] = new int[5];
-	private  int gabarito[] = new int[5];
+	private  int gabarito;
 	
 
 	
-	public Questao(String pergunta, String resposta1, String resposta2, String resposta3, String resposta4, int[] opcao,int[] gabarito) {
+	public Questao(String pergunta, String resposta1, String resposta2, String resposta3, String resposta4, int[] opcao,int gabarito) {
 		
 		this.pergunta = pergunta;
 		this.resposta1 = resposta1;
@@ -56,10 +56,10 @@ public class Questao {
 	public void setOpcao(int[] opcao) {
 		this.opcao = opcao;
 	}
-	public int[] getGabarito() {
+	public int getGabarito() {
 		return gabarito;
 	}
-	public void setGabarito(int[] gabarito) {
+	public void setGabarito(int gabarito) {
 		this.gabarito = gabarito;
 	}
 	
