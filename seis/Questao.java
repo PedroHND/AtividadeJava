@@ -6,8 +6,6 @@
  * 
  * */
 
-
-
 package questao.seis;
 
 public class Questao {
@@ -71,6 +69,16 @@ public class Questao {
 	public void setGabarito(int gabarito) {
 		this.gabarito = gabarito;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Questão: \n"
+				+ getPergunta() +"\n" 
+				+"Resposta 1: " + getResposta1() +"\n"
+				+"Resposta 2: " + getResposta2() +"\n"
+				+"Resposta 3: " + getResposta3() +"\n"
+				+"Resposta 4: " + getResposta4() +"\n"
+				+ "Digite o número referente a resposta que você acha que está correta.";
+	}
 	
 }
