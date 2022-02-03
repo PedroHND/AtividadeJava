@@ -15,8 +15,10 @@ public class Questao {
 	private String resposta1, resposta2, resposta3, resposta4;
 	private  int opcao[] = {1,2,3,4};
 	private  int gabarito;
-	//private ArrayList<Questao> lista = new ArrayList();
-
+	
+	public Questao() {
+		
+	}
 	
 	public Questao(String pergunta, String resposta1, String resposta2, String resposta3, String resposta4,int gabarito) {
 		
@@ -27,9 +29,6 @@ public class Questao {
 		this.resposta4 = resposta4;
 		this.gabarito = gabarito;
 	}
-	
-	
-
 	
 	public String getPergunta() {
 		return pergunta;
@@ -78,10 +77,10 @@ public class Questao {
 	public String toString() {
 		return "Questão: \n"
 				+ getPergunta() +"\n" 
-				+"Resposta 1: " + getResposta1() +"\n"
-				+"Resposta 2: " + getResposta2() +"\n"
-				+"Resposta 3: " + getResposta3() +"\n"
-				+"Resposta 4: " + getResposta4() +"\n"
+				+"Opção 1: " + getResposta1() +"\n"
+				+"Opção 2: " + getResposta2() +"\n"
+				+"Opção 3: " + getResposta3() +"\n"
+				+"Opção 4: " + getResposta4() +"\n"
 				+"Digite o número referente a resposta que você acha que está correta. \n";
 	}
 	
