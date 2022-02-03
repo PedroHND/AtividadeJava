@@ -10,7 +10,6 @@
 package questao.seis;
 
 import java.util.Scanner;
-import java.util.function.Consumer;
 import java.util.ArrayList;
 
 public class Quiz {
@@ -26,12 +25,12 @@ public class Quiz {
 		Questao q3 = new Questao("Qual desses jogadores não se aposentou ainda?", "Peyton Manning", "Andrew Luck", "Matt Ryan", "Tom Brady", 3);
 		Questao q4 = new Questao("Quem possui mais titulos na era Super Bowl", "Patriots", "Peyton Manning", "Steelers", "Tom Brady", 4);
 		
+		int respostas[] = {q1.getGabarito(), q2.getGabarito(), q3.getGabarito(), q4.getGabarito()};
+		
 		lista.add(q1);
 		lista.add(q2);
 		lista.add(q3);
 		lista.add(q4);
-		
-		System.out.println(lista.get(0));
 		
 		System.out.println("Digite o seu nome: ");
 		nomeParticipante = scan.next();
@@ -39,6 +38,13 @@ public class Quiz {
 		Participante p = new Participante( nomeParticipante );
 		
 		
+	}
+	
+	public static void leituraDasQuestoes(ArrayList<Questao> l) {
+		for(int i=0;i<4;i++) {
+			System.out.println(l.get(0));
+			
+		}
 	}
 	
 }
