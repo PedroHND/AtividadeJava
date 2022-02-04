@@ -54,7 +54,7 @@ public class Participante {
 	public String toString() {
 		return "Participante: " + getNome() + "\n"
 				+"Acerto(s):   " + getAcertos() + "\n"
-				+"Erro(s):     " + getAcertos() + "\n";
+				+"Erro(s):     " + getErros() + "\n";
 				
 		
 	}
