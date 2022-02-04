@@ -37,26 +37,72 @@ public class Quiz {
 		
 		Participante p = new Participante( nomeParticipante );
 		
-		
-	}
-	
-	public static void leituraDasQuestoes(ArrayList<Questao> l, Scanner s, Participante par) {
-		
 		for(int i=0;i<4;i++) {
-			System.out.println(l.get(0));
-			
-			verificarRespostas(s, par);
-			
+			System.out.println(lista.get(i));
+			verificarRespostas(scan, p, i, respostas);
 		}
 	}
 	
-	public static void verificarRespostas(Scanner s, Participante par) {
+	public static void verificarRespostas(Scanner s, Participante par,int aux, int[] res) {
+		 int num;
+		 
 		try {
+			num = s.nextInt();
 			
-		} catch (Exception e) {
+			switch(num) {
 			
-		}
+			case 1:
+				par.getRespostas()[aux] = num;
+				if (par.getRespostas()[aux] == res[aux]) {
+					par.setAcertos(par.getAcertos()+1);
+				}
+				else {
+					par.setErros(par.getErros()+1);
+				}
+			break;
+			
+			case 2:
+				par.getRespostas()[aux] = num;
+				if (par.getRespostas()[aux] == res[aux]) {
+					par.setAcertos(par.getAcertos()+1);
+				}
+				else {
+					par.setErros(par.getErros()+1);
+				}
+			break;
+			
+			case 3:
+				par.getRespostas()[aux] = num;
+				if (par.getRespostas()[aux] == res[aux]) {
+					par.setAcertos(par.getAcertos()+1);
+				}
+				else {
+					par.setErros(par.getErros()+1);
+				}
+			break;
+				
+			case 4:
+				par.getRespostas()[aux] = num;
+				if (par.getRespostas()[aux] == res[aux]) {
+					par.setAcertos(par.getAcertos()+1);
+				}
+				else {
+					par.setErros(par.getErros()+1);
+				}
+			break;
+			
+			default:
+				System.out.println("Resposta Inválida");
+				verificarRespostas(s, par, aux, res);
+			break;
+			}
+		} 
+		catch(InvalidAnswerException ex){
+			//throw new InvalidAnswerException("Resposta inválida");
+			String msg = "Resposta Inválida";
+			System.out.println("Exception " + msg);
+			
+		}		
 	}
-	
 }
 
