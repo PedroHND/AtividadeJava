@@ -12,7 +12,8 @@ public class Participante {
 	private String nome;
 	private int palpite;
 	private int respostas[] = new int [4];
-	private int acertos, erros;		
+	private int acertos, erros;	
+	
 	
 	public Participante(String nome) {
 		this.nome = nome;
@@ -49,5 +50,12 @@ public class Participante {
 		this.erros = erros;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Participante: " + getNome() + "\n"
+				+"Acerto(s):   " + getAcertos() + "\n"
+				+"Erro(s):     " + getAcertos() + "\n";
+				
+		
+	}
 }
