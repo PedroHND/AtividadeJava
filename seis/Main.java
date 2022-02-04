@@ -50,6 +50,8 @@ public class Main {
 				verificarRespostas(scan, p, i, respostas);
 			}
 		}
+		
+		System.out.println(p.toString());
 	}
 	
 	/*Metodo verificarRespostas
