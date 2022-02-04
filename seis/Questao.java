@@ -13,7 +13,6 @@ import java.util.ArrayList;
 public class Questao {
 	private String pergunta;
 	private String resposta1, resposta2, resposta3, resposta4;
-	private  int opcao[] = {1,2,3,4};
 	private  int gabarito;
 	
 	public Questao() {
@@ -60,19 +59,13 @@ public class Questao {
 	public void setResposta4(String resposta4) {
 		this.resposta4 = resposta4;
 	}
-	public int[] getOpcao() {
-		return opcao;
-	}
-	public void setOpcao(int[] opcao) {
-		this.opcao = opcao;
-	}
 	public int getGabarito() {
 		return gabarito;
 	}
 	public void setGabarito(int gabarito) {
 		this.gabarito = gabarito;
 	}
-	//for reach
+
 	@Override
 	public String toString() {
 		return "Questão: \n"
