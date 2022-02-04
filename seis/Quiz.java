@@ -5,6 +5,8 @@
  * Classe que será utilizada para realizar o quiz. 
  * Ela criará referências a objetos das classes Questao e Particpante para solucionar as questões
  * 
+ * Essa classe terá o import da biblioteca Scanner para ler as variaveis a partir do teclado;
+ * E ArrayList, para criar uma lista com as questões e fazer a sua impressão.
  * */
 
 package questao.seis;
@@ -16,7 +18,7 @@ public class Quiz {
 	public static void main(String[] args) {
 		
 		String nomeParticipante;
-		
+
 		ArrayList<Questao> lista = new ArrayList<Questao>();
 		Scanner scan = new Scanner(System.in);
 		
@@ -36,12 +38,18 @@ public class Quiz {
 		nomeParticipante = scan.next();
 		
 		Participante p = new Participante( nomeParticipante );
-		
+		//For para imprimir as questões e chamar o metodo verificarRespostas
 		for(int i=0;i<4;i++) {
 			System.out.println(lista.get(i));
 			verificarRespostas(scan, p, i, respostas);
 		}
 	}
+	
+	/*Metodo verificarRespostas
+	 * Irá verificar as respostas e será lançado uma exception caso a entrada seja inválida.
+	 * 
+	 * Caso seja válida, será realizado o switch case onde será adicionado ao vetor respostas da classe Participante e atualizando o valor de acertos e erros
+	 * */
 	
 	public static void verificarRespostas(Scanner s, Participante par,int aux, int[] res) {
 		 int num;
