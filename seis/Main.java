@@ -52,6 +52,13 @@ public class Main {
 		}
 		
 		System.out.println(p.toString());
+		
+		System.out.println("GABARITO");
+		System.out.println("Palpite - Gabarito \n");
+		for(int j = 0; j<4; j++) {
+			System.out.println("     "+p.getRespostas()[j] +"     "+ respostas[j] + "\n");
+				
+		}
 	}
 	
 	/*Metodo verificarRespostas
