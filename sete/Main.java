@@ -18,7 +18,6 @@ public class Main {
 		Usuario user = new Usuario("Pedro", "JuB2022");
 		String nome, senha;
 		
-		
 		Calendar cal =  Calendar.getInstance();
 		Scanner scan =  new Scanner(System.in);
 		int hora = cal.get(Calendar.HOUR_OF_DAY);
