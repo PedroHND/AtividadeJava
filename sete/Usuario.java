@@ -1,4 +1,4 @@
-/*Classe Participante, criada no dia 03/02/2022
+/*Classe Usuario, criada no dia 05/02/2022
  * 
  * Todos os direitos reservados a Compasso.UOL e Pedro Henrique Nunes Dutra
  * 
