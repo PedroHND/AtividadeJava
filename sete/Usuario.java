@@ -11,12 +11,31 @@ package questao.sete;
 public class Usuario {
 	private String nome;
 	private String senha;
+	private String matricula;
+	private String nomeLogin = nome + matricula;
 	
-	public Usuario(String nome, String senha) {
-		this.nome = nome;
+	public Usuario(String nome, String matricula, String senha) {
+		this.nome = nome;		
+		this.matricula = matricula;
 		this.senha = senha;
 	}
 	
+	public String getNomeLogin() {
+		return nome + matricula;
+	}
+
+	public void setNomeLogin(String nomeLogin) {
+		this.nomeLogin = nomeLogin;
+	}
+
+	public String getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -30,5 +49,8 @@ public class Usuario {
 		this.senha = senha;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return getNomeLogin();
+	}
 }
