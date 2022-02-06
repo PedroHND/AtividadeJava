@@ -7,6 +7,7 @@
 
 package questao.oito;
 
+import java.security.AlgorithmParameterGenerator;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -25,13 +26,25 @@ public class Main {
 		numFuncionarios = scan.nextInt();
 		
 		for(int i = 1; i<=numFuncionarios; i++) {
-			System.out.println("Digite o nome do Funcionário");
+			System.out.println("Digite o nome do Funcionário(a)");
 			nome = scan.next();
-			System.out.println("Digite o valor(Apenas os números) do salário do funcionário " + nome);
+			System.out.println("Digite o valor(Apenas os números) do salário do funcionário(a) " + nome);
 			salario = scan.nextDouble();
-			Funcionario fun = new Funcionario(nome, salario);
-			lista.add(fun);
-			System.out.println("Funcionario "+ i + " de "+numFuncionarios +" adicionado");
+			if(salario <=0) {
+				try {			
+					salario = (10/0);
+				}
+				catch(ArithmeticException ex){
+						System.out.println("Salario Invalido. Recadastre o funcionario(a)");
+				}finally {
+					i--;
+				}
+			}
+			else {
+				Funcionario fun = new Funcionario(nome, salario);
+				lista.add(fun);
+				System.out.println("Funcionario(a) "+ i + " de "+numFuncionarios +" adicionado");
+			}
 		}
 		
 		for(int j = 0; j<numFuncionarios; j++) {
