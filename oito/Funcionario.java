@@ -1,8 +1,16 @@
 package questao.oito;
 
 public class Funcionario {
-	private String nome;
+	private String nome, modoDeAlteracao;
+	
+	public String getModoDeAlteracao() {
+		return modoDeAlteracao;
+	}
+	public void setModoDeAlteracao(String modoDeAlteracao) {
+		this.modoDeAlteracao = modoDeAlteracao;
+	}
 	private double salario, alteracaoSalario, salarioLiquido;
+	
 	
 	public String getNome() {
 		return nome;
@@ -16,7 +24,7 @@ public class Funcionario {
 	public void setSalario(float salario) {
 		this.salario = salario;
 	}
-	public double getAlteracaoSalario(double alteracaoSalario) {
+	public double getAlteracaoSalario() {
 		if(salario <= 1000) {
 			alteracaoSalario = (salario * 0.2);
 		}
@@ -32,15 +40,26 @@ public class Funcionario {
 	public double getSalarioLiquido() {
 		if(salario <= 2000) {
 			salarioLiquido = salario + alteracaoSalario;
+			setModoDeAlteracao("Bônus:          ");
 		}
 		else {
 			salarioLiquido = salario - alteracaoSalario;
+			setModoDeAlteracao("Desconto:       ");
 		}
 		return salarioLiquido;
+		
 	}
 	public void setSalarioLiquido(float salarioLiquido) {
 		this.salarioLiquido = salarioLiquido;
 	}
+	@Override
+	public String toString() {
+		return "Funcionario:     " + getNome() + "\n"+
+				"Salário:        "+ getSalario() + "\n"+
+				getModoDeAlteracao() + getAlteracaoSalario() + "\n"+
+				"Salario Liquido:" + getSalario();
+	}
+	
 	
 	
 }
