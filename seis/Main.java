@@ -1,4 +1,4 @@
-/*Classe Quiz, criada no dia 03/02/2022
+/*Classe Main, criada no dia 03/02/2022
  * 
  * Todos os direitos reservados a Compasso.UOL e Pedro Henrique Nunes Dutra
  * 
