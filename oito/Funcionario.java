@@ -17,7 +17,12 @@ public class Funcionario {
 	}
 	
 	public String getModoDeAlteracao() {
-		return modoDeAlteracao;
+		if (salario <=2000) {
+			return "Bônus:";
+		}
+		else {
+			return "Desconto:";
+		}
 	}
 	public void setModoDeAlteracao(String modoDeAlteracao) {
 		this.modoDeAlteracao = modoDeAlteracao;
@@ -51,11 +56,10 @@ public class Funcionario {
 	public double getSalarioLiquido() {
 		if(salario <= 2000) {
 			salarioLiquido = salario + alteracaoSalario;
-			setModoDeAlteracao("Bônus:          ");
 		}
 		else {
 			salarioLiquido = salario - alteracaoSalario;
-			setModoDeAlteracao("Desconto:       ");
+
 		}
 		return salarioLiquido;
 		
@@ -65,10 +69,12 @@ public class Funcionario {
 	}
 	@Override
 	public String toString() {
-		return "Funcionario:     " + getNome() + "\n"+
-				"Salário:        "+ getSalario() + "\n"+
+		return "--------------------------------------------------- \n"
+				+ "Funcionario:" + getNome() + "\n"+
+				"Salário:"+ getSalario() + "\n"+
 				getModoDeAlteracao() + getAlteracaoSalario() + "\n"+
-				"Salario Liquido:" + getSalario();
+				"Salario Liquido:" + getSalarioLiquido() +"\n"+
+				"--------------------------------------------------- \n";
 	}
 	
 	
