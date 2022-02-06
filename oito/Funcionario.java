@@ -16,7 +16,7 @@ public class Funcionario {
 		this.salario = salario;
 	}
 	
-	public String getModoDeAlteracao() {
+public String getModoDeAlteracao() {
 		if (salario <=2000) {
 			return "Bônus:";
 		}
@@ -70,7 +70,7 @@ public class Funcionario {
 	@Override
 	public String toString() {
 		return "--------------------------------------------------- \n"
-				+ "Funcionario:" + getNome() + "\n"+
+				+ "Funcionario(a):" + getNome() + "\n"+
 				"Salário:"+ getSalario() + "\n"+
 				getModoDeAlteracao() + getAlteracaoSalario() + "\n"+
 				"Salario Liquido:" + getSalarioLiquido() +"\n"+
